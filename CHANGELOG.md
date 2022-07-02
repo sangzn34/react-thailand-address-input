@@ -2,6 +2,17 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="1.1.0"></a>
+# [1.1.0](https://github.com/sangzn34/react-thailand-address-input/compare/v1.0.0-beta.8...v1.1.0) (2022-07-02)
+
+
+### Features
+
+* initial value ([ff2cf9a](https://github.com/sangzn34/react-thailand-address-input/commit/ff2cf9a))
+* show label, custom placeholder className ([9f51c5e](https://github.com/sangzn34/react-thailand-address-input/commit/9f51c5e))
+
+
+
 <a name="1.0.0-beta.8"></a>
 # [1.0.0-beta.8](https://github.com/zapkub/react-thailand-address-typeahead/compare/v1.0.0-beta.7...v1.0.0-beta.8) (2017-04-09)
 
