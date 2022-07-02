@@ -4,14 +4,23 @@ import { fieldsEnum } from './finder';
 import AddressTypeahead from './AddressTypeahead.component';
 
 type AddressFormInputPropType = {
-    values: {
-        a: string;
-        d: string;
-        p: string;
-        z: string;
-    };
-    onAddressSelected: (addresObject) => void;
-    renderResult: (data) => React.Component;
+  values: {
+    a: string;
+    d: string;
+    p: string;
+    z: string;
+  };
+  showLabel: { type: boolean, default: true };
+  classNameInput: string;
+  maxVisible: { type: number };
+  placeholder: {
+    a: string;
+    d: string;
+    p: string;
+    z: string;
+  };
+  onAddressSelected: (addresObject) => void;
+  renderResult: (data) => React.Component;
 }
 class AddressForm extends React.Component {
   constructor(props) {
@@ -41,9 +50,15 @@ class AddressForm extends React.Component {
           }
           return (
             <div key={key} className="typeahead-address-container">
-              <label className="typeahead-address-label" htmlFor="district">{name}</label>
+              {this.props.showLabel ?
+                <label className="typeahead-address-label" htmlFor="district">{name}</label>
+                : <label></label>
+              }
               <AddressTypeahead
+                className={this.props.classNameInput}
+                placeholder={this.props.placeholder ? this.props.placeholder[fieldsEnum[key]] || '' : ''}
                 renderResult={this.props.renderResult}
+                maxVisible={this.props.maxVisible}
                 onOptionSelected={(result) => {
                   this.setAddressObj(result);
                   this.props.onAddressSelected(result);
@@ -54,9 +69,13 @@ class AddressForm extends React.Component {
             </div>
           );
         })
-    }
+      }
     </div>);
   }
 }
+
+AddressForm.defaultProps = {
+  maxVisible: 20,
+};
 
 export default AddressForm;

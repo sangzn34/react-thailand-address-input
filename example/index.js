@@ -4,6 +4,7 @@ import { withState } from 'recompose';
 import AddressForm from '../src/index';
 
 import '../src/styles.css';
+import TestProps from './TestProps';
 
 storiesOf('Component', module)
   .add('montage', () => (
@@ -36,37 +37,42 @@ storiesOf('Component', module)
     </div>);
   })
   .add('custom render result', () => (
-    <div style={{ width: 400 }}>
-      <AddressForm
-        renderResult={data => <b>{`Hi ${data.p}:${data.d} ${data.a}`}</b>}
-        onAddressSelected={action('onSelectedAdress')}
-      />
-    </div>
+    <TestProps />
   ))
-  .add('set value', () => (
+  .add('custom initial', () => (
     <div style={{ width: 350 }}>
       <AddressForm
-        values={{
-          a: 'คลองสาน',
-          d: 'คลองต้นไทร',
-          p: 'กรุงเทพมหานคร',
-          z: '10600',
-        }}
         onAddressSelected={action('onSelectedAdress')}
+        values={{
+          d: "ฟากท่า", a: "ฟากท่า", p: "อุตรดิตถ์", z: 53161
+        }}
       />
-      <code>
-        {`
-          <AddressForm
-            values={{
-              a: 'คลองสาน',
-              d: 'คลองต้นไทร',
-              p: 'กรุงเทพมหานคร',
-              z: '10600',
-            }}
-            onAddressSelected={action('onSelectedAdress')}
-          />
-        `}
-      </code>
+      <code>{'<AddressForm onAddressSelected={action(\'onSelectedAdress\')} />'}</code>
     </div>
   ))
+  .add('show label', () => (
+    <div style={{ width: 350 }}>
+      <AddressForm
+        showLabel
+        onAddressSelected={action('onSelectedAdress')}
+        values={{
+          d: "ฟากท่า", a: "ฟากท่า", p: "อุตรดิตถ์", z: 53161
+        }}
+      />
+      <code>{'<AddressForm onAddressSelected={action(\'onSelectedAdress\')} />'}</code>
+    </div>
+  ))
+  .add('maxVisible', () => (
+    <div style={{ width: 350 }}>
+      <AddressForm
+        showLabel
+        maxVisible={40}
+        onAddressSelected={action('onSelectedAdress')}
+        values={{
+          d: "ฟากท่า", a: "ฟากท่า", p: "อุตรดิตถ์", z: 53160
+        }}
+      />
+      <code>{'<AddressForm onAddressSelected={action(\'onSelectedAdress\')} />'}</code>
+    </div>
+  ));
 
