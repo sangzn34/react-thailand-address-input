@@ -1,14 +1,14 @@
 {
-  "name": "react-thailand-address-typeahead",
+  "name": "react-thailand-address-input",
   "version": "1.0.0",
   "main": "dist/index.js",
   "repository": {
-    "url": "git@github.com:zapkub/react-thailand-address-typeahead.git",
+    "url": "git@github.com:sangzn34/react-thailand-address-input.git",
     "type": "git"
   },
   "scripts": {
     "commit": "git-cz",
-    "release": "npm run build && standard-version --prerelease beta",
+    "release": "npm run build && standard-version",
     "test": "jest",
     "build": "babel src --out-dir dist --copy-files",
     "webpack": "webpack",
