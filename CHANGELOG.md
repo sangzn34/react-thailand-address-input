@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="1.2.0"></a>
+# [1.2.0](https://github.com/sangzn34/react-thailand-address-input/compare/v1.0.0-beta.8...v1.2.0) (2022-08-26)
+
+
+### Features
+
+* initial value ([ff2cf9a](https://github.com/sangzn34/react-thailand-address-input/commit/ff2cf9a))
+* modify data postcode ท่าแร้ง 10220 => 10230 ([30e7e27](https://github.com/sangzn34/react-thailand-address-input/commit/30e7e27))
+* show label, custom placeholder className ([9f51c5e](https://github.com/sangzn34/react-thailand-address-input/commit/9f51c5e))
+
+
+
 <a name="1.1.0"></a>
 # [1.1.0](https://github.com/sangzn34/react-thailand-address-input/compare/v1.0.0-beta.8...v1.1.0) (2022-07-02)
 
